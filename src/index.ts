@@ -2,6 +2,7 @@ export { ClawChatAdapter } from "./adapter";
 export { createClawChatAdapter } from "./factory";
 export { ClawChatFormatConverter } from "./format-converter";
 export {
+  CLAWCHAT_WEBSOCKET_URL,
   DEFAULT_BASE_URL,
   DEFAULT_CAPABILITIES,
   DEFAULT_WEBSOCKET_URL,

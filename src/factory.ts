@@ -2,7 +2,7 @@ import { ValidationError } from "@chat-adapter/shared";
 import { ConsoleLogger, type Logger } from "chat";
 
 import { ClawChatAdapter } from "./adapter";
-import { DEFAULT_BASE_URL, DEFAULT_WEBSOCKET_URL } from "./protocol";
+import { CLAWCHAT_WEBSOCKET_URL, DEFAULT_BASE_URL } from "./protocol";
 import type { ClawChatAdapterConfig } from "./types";
 
 export type CreateClawChatAdapterConfig = Partial<ClawChatAdapterConfig> & {
@@ -17,7 +17,7 @@ export function createClawChatAdapter(config: CreateClawChatAdapterConfig = {}):
     config.websocketUrl ??
     env("CLAWCHAT_WEBSOCKET_URL") ??
     env("CLAWCHAT_WS_URL") ??
-    DEFAULT_WEBSOCKET_URL;
+    CLAWCHAT_WEBSOCKET_URL;
   const mediaUploadUrl =
     config.mediaUploadUrl ?? env("CLAWCHAT_MEDIA_UPLOAD_URL") ?? `${baseUrl}/media/upload`;
   const token = config.token ?? env("CLAWCHAT_TOKEN");

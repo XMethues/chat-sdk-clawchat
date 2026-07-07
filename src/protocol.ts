@@ -11,7 +11,9 @@ const PROTOCOL_VERSION = "2";
 const ULID_ALPHABET = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";
 
 export const DEFAULT_BASE_URL = "https://app.clawling.com";
-export const DEFAULT_WEBSOCKET_URL = "wss://app.clawling.com/ws";
+/** Hermes ClawChat plugin default WebSocket endpoint. Env can override it in the factory. */
+export const CLAWCHAT_WEBSOCKET_URL = "wss://app.clawling.com/ws";
+export const DEFAULT_WEBSOCKET_URL = CLAWCHAT_WEBSOCKET_URL;
 
 export const DEFAULT_CAPABILITIES: ClawChatCapabilities = {
   multi_device: false,

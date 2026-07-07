@@ -41,7 +41,7 @@ await bot.initialize(); // opens the ClawChat WebSocket
 | --- | --- | --- |
 | `CLAWCHAT_TOKEN` | Yes | Opaque bearer token for the ClawChat WebSocket and media upload API. |
 | `CLAWCHAT_USER_ID` | Yes | Bot/runtime ClawChat user id, used to drop self-echoes. |
-| `CLAWCHAT_WEBSOCKET_URL` / `CLAWCHAT_WS_URL` | No | Defaults to `wss://app.clawling.com/ws`. |
+| `CLAWCHAT_WEBSOCKET_URL` / `CLAWCHAT_WS_URL` | No | Overrides the exported `CLAWCHAT_WEBSOCKET_URL` default, currently the Hermes plugin default `wss://app.clawling.com/ws`. |
 | `CLAWCHAT_BASE_URL` | No | Defaults to `https://app.clawling.com`. |
 | `CLAWCHAT_MEDIA_UPLOAD_URL` | No | Defaults to `${CLAWCHAT_BASE_URL}/media/upload`. |
 | `CLAWCHAT_DEVICE_ID` | Recommended | Stable device id for ClawChat replay cursors. |

@@ -5,11 +5,18 @@ import {
   buildMessageSendFrame,
   buildStreamAddFrame,
   buildStreamDoneFrame,
+  CLAWCHAT_WEBSOCKET_URL,
   DEFAULT_CAPABILITIES,
+  DEFAULT_WEBSOCKET_URL,
   newMessageId,
 } from "./protocol";
 
 describe("protocol helpers", () => {
+  it("exports the Hermes default ClawChat WebSocket URL", () => {
+    expect(CLAWCHAT_WEBSOCKET_URL).toBe("wss://app.clawling.com/ws");
+    expect(DEFAULT_WEBSOCKET_URL).toBe(CLAWCHAT_WEBSOCKET_URL);
+  });
+
   it("generates protocol-compatible message ids", () => {
     expect(newMessageId()).toMatch(/^msg-[0-9A-HJ-NP-TV-Z]{26}$/);
   });
