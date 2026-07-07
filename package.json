@@ -1,0 +1,53 @@
+{
+  "name": "@clawling/chat-sdk-clawchat",
+  "version": "0.1.0",
+  "description": "ClawChat Protocol v2 adapter for Chat SDK",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "check": "tsc --noEmit && vitest run",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "chat": "^4.0.0"
+  },
+  "dependencies": {
+    "@chat-adapter/shared": "^4.32.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "@types/ws": "^8.18.1",
+    "chat": "^4.32.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  },
+  "keywords": [
+    "chat-sdk",
+    "chat-adapter",
+    "clawchat",
+    "clawling"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
